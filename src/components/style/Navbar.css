@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+#namePic {
+    height: 4vw;
+    /* border-bottom: 0.1vw solid black; */
+
+}
+header img {
+    height: 3.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0.3vw;
+
+}
+
+.font-loader {
+    text-shadow: 0 0 0.5vw rgb(0, 204, 255);
+
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(0, 204, 255);
+
+
+ }
+
+#pages {
+    margin-right: 1vw;
+}
+
+#me {
+    margin-top: 0.5vw;
+
+
+    float: right;
+}
+
+
+header {
+    font-family: 'Titillium Web', sans-serif;
+    /* background-color: white; */
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4vw;
+    width: 100%;
+    align-items: center;
+    /* border-bottom: 0.1vw solid #E9E9E9; */
+    border-bottom: 0.1vw solid black;
+    /* box-shadow: 0 0 1.5vw 0 black; */
+    display:flex;
+    justify-content:space-between;
+    /* z-index: 10000; */
+}
+
+header * {
+    display: inline;
+}
+
+.navItem {
+    text-decoration: bold;
+
+}
+
+header li {
+
+    
+    margin: 1vw;
+    font-size: 1vw;
+    font-weight: bolder;
+    
+
+}
+
+header li a {
+
+    color: rgb(0, 204, 255);
+
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 0.5vw white;
+    /* background-color: #E9E9E9; */
+    /* color: rgb(0, 204, 255); */
+    color: white;
+}
+
+@media (max-width: 1000px) {
+
+
+    #namePic {
+        height: 10vw;
+        /* border-bottom: 0.1vw solid black; */
+    
+    }
+
+    header img {
+        margin-top: 0.8vw;
+
+        width: 8.5vw;
+        height: 8.5vw;
+    }
+
+    #me {
+        margin-top: 1.8vw;
+
+
+        float: right;
+        font-size: 4vw;
+    }
+
+
+    header {
+        font-family: 'Titillium Web', sans-serif;
+        /* background-color: white; */
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 10vw;
+        width: 100%;
+        align-items: center;
+
+        display:flex;
+        justify-content:space-between;
+        
+
+    }
+
+    header * {
+        display: inline;
+    }
+
+    header li {
+        padding-left: 0;
+        margin: 1vw;
+        font-size: 2.5vw;
+        font-weight: bolder;
+    }
+
+    header li a {
+        /* color: black; */
+        color: rgb(0, 204, 255);
+
+        text-decoration: none;
+    }
+
+    a:hover {
+
+        /* color: rgb(0, 204, 255); */
+        color: white;
+
+    }
+
+
+}
