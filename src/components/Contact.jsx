@@ -15,7 +15,7 @@ class Handle extends React.Component {
         return (
             <div id="com">
                 <img className="logoImg" src={this.props.image} alt="logo" />
-                <p className="cLink">{this.props.site}: {this.props.link}</p>
+                <p className="cText" id="cLink">{this.props.site}: {this.props.link}</p>
             </div>
         )
     }
@@ -24,10 +24,10 @@ class Handle extends React.Component {
 function Contact() {
     return (
         <div>
-            <p id="cTitle">Find me at:</p>
+            <p className="cText" id="cTitle">Find me at:</p>
             <Handle image={gmail} site="Email" link="mdl4@williams.edu"/>
             <Handle image={linkedin} site="Linkedin" link="linkedin.com/in/matt-d-laws/"/>
-            <Handle image={github} site="Github" link="github.com/mlaws21"/>
+            <Handle image={github} site="Github" link="github.com/mlaws21/"/>
 
 
         </div>

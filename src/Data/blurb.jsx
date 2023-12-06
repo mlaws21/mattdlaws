@@ -1,0 +1,3 @@
+const blurb = "I am a Computer Science Major at Williams College, interested in Software Engineering, Machine Learning, Computer Graphics, Computer Vision, and Operating Systems. I have experience in Succinct Data Structures Research working on a space efficient Rank and Select Structure as will as software development experience working on creating a regression testing engine for IAS's Twitter brand safety pipeline. I enjoy developing video games in OpenGL, creating machine learning algorithms to answer interesting questions, and building websites using React hosted using AWS s3."
+
+export default blurb;

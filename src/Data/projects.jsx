@@ -4,5 +4,7 @@ const proj1 = ["WRFC Website", "Williams College Rugby Football Club Website", "
 
 const proj2 = ["Mini Golf", "9 Hole 3-Dimensional Mini Golf Game", "Created a ray traced 3D Mini Golf game with blinn-phong lighting and realistic collisions using OpenGL", "https://youtu.be/IVGg3OhPSVQ?si=B1rMTCWT8xUgzpU_", "Click here to view a demo"]
 
+// const proj3 = ["Operating Systems", "Thread Concurency Primatives, ", "Created a ray traced 3D Mini Golf game with blinn-phong lighting and realistic collisions using OpenGL", "https://youtu.be/IVGg3OhPSVQ?si=B1rMTCWT8xUgzpU_", "Click here to view a demo"]
+
 const projectArr = [proj1, proj2]
 export default projectArr;

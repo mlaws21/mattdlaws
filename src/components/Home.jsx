@@ -86,7 +86,7 @@ class MyTypewriter extends React.Component {
                 cursorClassName: this.props.class,
                 deleteSpeed: this.state.delete,
                 delay: this.props.speed, 
-                cursor: this.state.cursor,
+                cursor: "",
 
             }}
                 onInit={(typewriter) => {
@@ -137,7 +137,7 @@ function build() {
     var all = [];
     var labels = text[2]
     for (var i = 1; i < text[0].length; i++) {
-        all.push(<MyTypewriter type={0} string={text[2][i]} doesLoop={true} class={"typeWriterData"} delay={10000} speed={1500 / text[2][i][0].length} delete={1500 / text[2][i][0].length}/>)
+        all.push(<MyTypewriter type={0} string={text[2][i]} doesLoop={true} class={"typeWriterData"} speed={40 / text[2][i].length} delay={999999999999999} delete={20 / text[2][i][0].length} />)
         all.push(<div className="cycleData">{MyData(text[0][i])}</div>)
         all.push(<div className="cycleData"><MyXData words={text[0][i]} length={text[0][i].length}/></div>)
     }
@@ -148,7 +148,7 @@ function Home() {
   return (
         <div className="home">
             <div id="name">
-                <MyTypewriter id="name" type={0} string={text[0][0]} doesLoop={true} class={"typeWriterMain"} delay={999999999999999} speed={1500 /text[0][0][0].length}/>
+                <MyTypewriter id="name" type={0} string={text[0][0]} doesLoop={true} class={"typeWriterMain"} delay={999999999999999} speed={40 /text[0][0].length} />
             </div>
             {/* <MyTypewriter id="name" type={1} string={text[0][1]} doesLoop={text[1][0]} class={"typeWriterMain"} delay={999999999999999}/> */}
             {build()}
