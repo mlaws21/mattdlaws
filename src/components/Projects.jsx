@@ -1,13 +1,24 @@
 import React from 'react';
 
 import "./style/Projects.css";
-import data from '../Data/projects.jsx';
+import data from '../Data/projectData.jsx';
 import i1 from './images/wrfc.png';
 import i2 from './images/minigolf.png';
+import i3 from './images/skin+base.png';
+import i4 from './images/sp.png';
+import i5 from './images/sd.png';
+
+
 import bi1 from './images/wrfcPage.png';
 import bi2 from './images/minigolf.png';
-const images = [i1, i2]
-const bigImages = [bi1, bi2]
+import bi3 from './images/asl.png';
+import bi4 from './images/spb.png';
+import bi5 from './images/sdb.png';
+
+
+
+const images = [i1, i2, i3, i4, i5]
+const bigImages = [bi1, bi2, bi3, bi4, bi5]
 
 
 
