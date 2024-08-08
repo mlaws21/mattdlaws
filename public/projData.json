@@ -1,0 +1,83 @@
+[
+  {
+    "title": "NHPT Evaluation",
+    "bigTitle": "Automatic Evaluation of the Nine Hole Peg Test",
+    "description": "Working in the AI/ML department at Sanofi, I developed a tool capabale of evaluating a patients performance on the NHPT solely from a video of the test. The NHPT is one of the most widely used arm mobility tests in clinical practice.",
+    "link": "https://arxiv.org/abs/0000.00000",
+    "linkText": "Click here to see the paper",
+    "image": "./images/nhpt1.png",
+    "bigImage": "./images/nhpt.png"
+  },
+  {
+    "title": "ASL Interpreter",
+    "bigTitle": "Computer Vision ASL Interpreter",
+    "description": "Used machine learning to develop an American Sign Language (ASL) letter Interpreter. Obtained a 97% test accuracy on unseen test data, 95% accuracy of correctly predicting 6 letter words and includes a live video translation feature.",
+    "link": "https://github.com/mlaws21/ASL-Interpreter",
+    "linkText": "Click here to see the repo",
+    "image": "./images/skin+base.png",
+    "bigImage": "./images/asl.png"
+  },
+  {
+    "title": "Causal Selection",
+    "bigTitle": "Improving Machine Learning Algorithms with Causal Inference",
+    "description": "Developed an easy to use framework for pruning feature spaces when training ML models using Causal Inference. Improved test accuracy by up to 50% when reducing feature space by more than 50%.",
+    "link": "https://github.com/mlaws21/Causal-Feature-Finding",
+    "linkText": "Click here to see the repo",
+    "image": "./images/cff1.png",
+    "bigImage": "./images/cff.png"
+  },
+  {
+    "title": "Rank and Select",
+    "bigTitle": "SPIDER: Improved Succinct Rank and Select Performance",
+    "description": "Worked with Professor Sam McCauley to develop a faster Succinct Rank and Select Data Structure. Developed theoretical algorithms, implemented, and optimized them in C. Was made first author on the paper and presented my research in a talk at the Symposium on Experimental Algorithms 2024.",
+    "link": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SEA.2024.21",
+    "linkText": "Click here to view the publication",
+    "image": "./images/sea.png",
+    "bigImage": "./images/soundQuest.png"
+  },
+  {
+    "title": "SoundQuest",
+    "bigTitle": "Song Trivia Game",
+    "description": "Developed a local multiplayer song trivia game that generates \"guess the song\" style questions based on a spotify playlist. Built from scratch using react and the spotify API.",
+    "link": "https://github.com/mlaws21/Causal-Feature-Finding",
+    "linkText": "Click here to see the repo",
+    "image": "./images/soundQuest1.png",
+    "bigImage": "./images/soundQuest.png"
+  },
+  {
+    "title": "WRFC Website",
+    "bigTitle": "Williams College Rugby Football Club Website",
+    "description": "Developed a website for my club rugby team from scratch using React and host it using AWS s3 services.",
+    "link": "http://williamscollegerugby.com/",
+    "linkText": "Click here to view the site",
+    "image": "./images/wrfc.png",
+    "bigImage": "./images/wrfcPage.png"
+  },
+  {
+    "title": "Stochastic Parody",
+    "bigTitle": "Parody Generating Programming Language",
+    "description": "Used F# to develop a programming language that can generate song parodies according to basic annotations",
+    "link": "https://github.com/mlaws21/Stochastic-Parody",
+    "linkText": "Click here to see the repo",
+    "image": "./images/sp.png",
+    "bigImage": "./images/spb.png"
+  },
+  {
+    "title": "Snar Delivery",
+    "bigTitle": "Food Delivery App Built on SUI Blockchain",
+    "description": "Used Sui Move to publish a smart contract along with React to develop a doordash-like app for Williams. Transactions are completed using the SUI crypto currency. Project was awarded 1st Place at the Williams College x Mysten Labs Hackathon 2024.",
+    "link": "https://snar-delivery.vercel.app/",
+    "linkText": "Click here to see the site",
+    "image": "./images/sd.png",
+    "bigImage": "./images/sdb.png"
+  },
+  {
+    "title": "Mini Golf",
+    "bigTitle": "9 Hole 3-Dimensional Mini Golf Game",
+    "description": "Created a ray traced 3D Mini Golf game with blinn-phong lighting and realistic collisions using OpenGL",
+    "link": "https://youtu.be/IVGg3OhPSVQ?si=B1rMTCWT8xUgzpU_",
+    "linkText": "Click here to view a demo",
+    "image": "./images/minigolf.png",
+    "bigImage": "./images/minigolf.png"
+  }
+]
