@@ -10,7 +10,7 @@ function Navbar() {
     
     return (
         
-        <header>
+        <header id="navbar">
             <div id="namePic">
                 <img id="imgDiv" src={logo} alt='williams logo'></img>
                 <a id="me" className="font-loader"  href='/'>Matt Laws</a>

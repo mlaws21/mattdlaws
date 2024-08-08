@@ -101,35 +101,7 @@ class MyTypewriter extends React.Component {
                 }}
             />
             )
-        // } else {
-        //     return (
-        //         <Typewriter
-        //         options={{
-        //             strings: this.props.string,
-        //             skipAddStyles: true,
-        //             autoStart: true,
-        //             loop: this.props.doesLoop,
-        //             wrapperClassName: this.props.class,
-        //             cursorClassName: this.props.class,
-        //             // delaySpeed: 10000000,
-        //             // delay: 100,
-        //             typeSpeed: this.props.string[0].length,
-        //             deleteSpeed: speeeeed,
-        //         }}
-        //             onInit={(typewriter) => {
 
-        //                 typewriter
-        //                     .typeString()
-        //                     // .deleteAll()
-        //                     .start()
-        //                     // .callFunction(() => setTimeout(() => { speeeeed = 0;}, 1))
-        //                     // .pauseFor(this.props.delay)
-                            
-        //             }}
-        //         />
-        //     )
-        // }
-        
     }
 }
 

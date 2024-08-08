@@ -47,3 +47,39 @@
     /* background-color: red; */
     float: right;
 }
+
+@media (max-width: 1000px) {
+
+    .right {
+        padding-right: 8%;
+    
+        padding-top: 0%;
+
+
+    
+        width: 80%;
+        
+        /* background-color: red; */
+        float: right;
+    }
+    #blurb {
+
+        font-size: 3.5vw;
+        margin-bottom: 1vw;
+
+    }
+
+    #resLink {
+        font-size: 3.5vw;
+    }
+
+    #meImg {
+        /* padding: 6%; */
+    
+
+        /* position: relative; */
+        left: 9%;
+        width: 70%;
+        position: relative;
+    }
+}

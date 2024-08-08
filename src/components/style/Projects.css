@@ -16,8 +16,10 @@ p,a {
 .img {
     background-color: rgb(0, 204, 255, 0);
     height: 10vw;
-    padding-top: 0.7vw;
+    margin-top: 0.7vw;
     width: auto;
+    border-radius: 1vw;
+
 }
 
 .projClose {
@@ -54,10 +56,10 @@ p,a {
 }
 .projOpen {
 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(25%, -45%);
+    position: fixed;
+    /* left: 50%; */
+    /* top: 50%; */
+    transform: translate(25%, 2.5%);
     z-index: 1;
     left: auto;
     padding: 3vw;
@@ -138,4 +140,86 @@ p,a {
     height: 100%;
 
     background-color: rgb(0, 204, 255, 0);
+}
+
+@media (max-width: 1000px) {
+
+    .projClose {
+
+        font-size: 8vw;
+        border-radius: 3vw;
+        width: 75vw;
+        height: 75vw;
+        margin-left: 0;
+        margin-right: 0;
+        /* padding: 1.5vw; */
+        left: 11vw;
+        position: relative;
+
+    
+    }
+
+    .img {
+        height: 55vw;
+        margin-top: 3vw;
+        width: auto;
+        border-radius: 3vw;
+
+
+    }
+
+    .projOpen {
+
+        position: fixed;
+        /* left: 50%; */
+        /* top: 50%; */
+        transform: translate(8%, 2.5%);
+        padding: 5vw;
+        border-radius: 3vw;
+        background-color: rgb(0, 204, 255);
+        box-shadow: 0 0 0.5vw rgb(0, 204, 255);
+        width: 75vw;
+        height: fit-content;
+        max-height: 60vh;
+        text-align: center;
+        overflow-y: scroll;
+    
+    }
+
+    #demo {
+        padding-top: 3vw;
+        /* float: right; */
+        background-color: rgb(0, 204, 255, 0);
+        width: 100%;
+
+    
+    }
+
+    #description {
+        padding-top: 3%;
+    
+        width :100%;
+        height: auto;
+        float: left;
+        font-size: 4vw;
+        overflow-y: scroll;
+        
+        
+    
+        /* border: 0.1vw solid  rgba(69, 82, 81, 0.661); */
+    }
+
+    #link {
+        font-size: 3vw;
+        padding-top: 1%;
+        text-align: center;
+        background-color: rgb(0, 204, 255, 0);
+        float: right;
+        
+    }
+
+    .bigTitle {
+        font-size: 4vw;
+    }
+
 }

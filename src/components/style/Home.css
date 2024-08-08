@@ -89,3 +89,23 @@
  * {
     background: rgb(23, 23, 23);
  }
+
+ @media (max-width: 1000px) {
+  .typeWriterMain {
+    font-size: 12vw;
+    height: 10vw;
+
+}
+
+  .cycleData {
+    font-size: 4vw;
+    height: 8vw;
+  }
+
+  .typeWriterData {
+    /* text-shadow: 0 0 0.5vw rgb(0, 204, 255); */
+    height: 0vw;
+    font-size: 5vw;
+
+}
+ }
