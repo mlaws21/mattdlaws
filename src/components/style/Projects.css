@@ -88,16 +88,20 @@ p,a {
 #description {
     padding-top: 3%;
 
-    width :35%;
+    width :45%;
+    height: 70%;
     float: left;
-    font-size: 2vw;
+    font-size: 1.8vw;
+    overflow-y: scroll;
+
+    /* border: 0.1vw solid  rgba(69, 82, 81, 0.661); */
 }
 
 #demo {
     padding-top: 3%;
     float: right;
     background-color: rgb(0, 204, 255, 0);
-    width: 60%;
+    width: 50%;
 
 }
 #bigImage {

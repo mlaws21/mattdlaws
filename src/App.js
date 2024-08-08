@@ -13,24 +13,27 @@ import Error from './components/Error.jsx';
 
 
 
+
 function App() {
   return (
     <div>
       < Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/resume' element={<Resume />} />
+      <div id="main">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/resume' element={<Resume />} />
 
 
-        <Route path='*' element={<Error />} />
+          <Route path='*' element={<Error />} />
 
 
 
 
-      </Routes>
+        </Routes>
+      </div>
     </div>
   );
 }

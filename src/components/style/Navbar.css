@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
 
+
 #namePic {
     height: 4vw;
     /* border-bottom: 0.1vw solid black; */
@@ -38,9 +39,11 @@ header img {
 
 
 header {
+    z-index: 1000;
+
     font-family: 'Titillium Web', sans-serif;
     /* background-color: white; */
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -92,7 +95,7 @@ a:hover {
 
 
     #namePic {
-        height: 10vw;
+        height: 10%;
         /* border-bottom: 0.1vw solid black; */
     
     }
@@ -114,13 +117,14 @@ a:hover {
 
 
     header {
+        z-index: 1000;
         font-family: 'Titillium Web', sans-serif;
         /* background-color: white; */
-        position: relative;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        height: 10vw;
+        height: 10%;
         width: 100%;
         align-items: center;
 

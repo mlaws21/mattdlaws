@@ -1,109 +1,89 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
 import "./style/Projects.css";
-import data from '../Data/projectData.jsx';
-import i1 from './images/wrfc.png';
-import i2 from './images/minigolf.png';
-import i3 from './images/skin+base.png';
-import i4 from './images/sp.png';
-import i5 from './images/sd.png';
-
-
-import bi1 from './images/wrfcPage.png';
-import bi2 from './images/minigolf.png';
-import bi3 from './images/asl.png';
-import bi4 from './images/spb.png';
-import bi5 from './images/sdb.png';
-
-
-
-const images = [i1, i2, i3, i4, i5]
-const bigImages = [bi1, bi2, bi3, bi4, bi5]
-
-
 
 class ProjContainer extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            status: true
-        }
-        this.handleClick = this.handleClick.bind(this);
-    }
-    
-    handleClick() {
-        this.setState({status: !this.state.status});
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      status: true
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
+  handleClick() {
+    this.setState({ status: !this.state.status });
+  }
 
-    render() {
-        if (this.state.status) {
-            return (
-                <div className="projClose" onClick={this.handleClick}>
-                    <p className="projTitle">{this.props.title}</p>
-                    <img className="img" src={this.props.image} />
-
-                </div>
-                
-            )
-        } else {
-            return (
-                <div>
-                    <div id="else" onClick={this.handleClick}></div>
-                    <div className="projClose">
-                        <p className="projTitle">{this.props.title}</p>
-                        <img className="img" src={this.props.image} />
-
-
-                    </div>
-                    
-                    <div className="projOpen">
-                        {/* <p id="close">x</p> */}
-                        <p className="bigTitle">{this.props.exTitle}</p>
-                        <p id="description">{this.props.description}</p>
-                        <div id="demo">
-                            <img id="bigImage" src={this.props.bigImage} /> 
-                            <a id="link"href={this.props.link} target="_blank">{this.props.linkDescription}</a>
-
-                        </div>
-                        
-
-
-
-                    </div>
-                    
-                </div>
-                
-            )
-        }
-
-    }
-
-}
-
-function build() {
-    var all = [];
-    for (var i = 0; i < data.length; i++) {
-        all.push(<ProjContainer 
-            title={data[i][0]} 
-            exTitle={data[i][1]} 
-            image={images[i]} 
-            bigImage={bigImages[i]} 
-            description={data[i][2]} 
-            link={data[i][3]}
-            linkDescription={data[i][4]}
-             />)
-    }
-    return (all);
-}
-
-function Projects() {
-
-    return (
-        <div id="projects">
-            {build()}
+  render() {
+    if (this.state.status) {
+      return (
+        <div className="projClose" onClick={this.handleClick}>
+          <p className="projTitle">{this.props.title}</p>
+          <img className="img" src={this.props.image} alt={this.props.title} />
         </div>
-    )
+      );
+    } else {
+      return (
+        <div>
+          <div id="else" onClick={this.handleClick}></div>
+          <div className="projClose">
+            <p className="projTitle">{this.props.title}</p>
+            <img className="img" src={this.props.image} alt={this.props.title} />
+          </div>
+          <div className="projOpen">
+            <p className="bigTitle">{this.props.exTitle}</p>
+            <p id="description">{this.props.description}</p>
+            <div id="demo">
+              <img id="bigImage" src={this.props.bigImage} alt={this.props.exTitle} />
+              <a id="link" href={this.props.link} target="_blank" rel="noopener noreferrer">
+                {this.props.linkDescription}
+              </a>
+            </div>
+          </div>
+        </div>
+      );
+    }
+  }
 }
 
-export default Projects;
+const Projects = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const url = "./projData.json";
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        // const {results} = json;
+        // Only put the results in state, ie, the actual users array
+        setProjects(json);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+
+    fetchData();
+
+  }, []);
+
+  const build = () => {
+    return projects.map((project, index) => (
+      <ProjContainer
+        key={index}
+        title={project.title}
+        exTitle={project.bigTitle}
+        description={project.description}
+        link={project.link}
+        linkDescription={project.linkText}
+        image={project.image}
+        bigImage={project.bigImage}
+      />
+    ));
+  };
+
+  return <div id="projects">{projects.length > 0 ? build() : <p>Loading projects...</p>}</div>;
+};
+
+export default Projects

@@ -13,13 +13,17 @@
 #blurb {
     /* float: right; */
     /* padding: 5%; */
-
+    /* position: relative; */
     font-size: 1.6vw;
 }
 
 #meImg {
-    float: left;
     padding: 6%;
+
+    padding-top: 8%;
+    float: left;
+    /* position: relative; */
+
     width: 20%;
 }
 

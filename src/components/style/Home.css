@@ -81,8 +81,9 @@
  }
 
  .home {
-    background: rgb(23, 23, 23);
-    text-align: center;
+   top: 10%;
+   background: rgb(23, 23, 23);
+   text-align: center;
  }
 
  * {

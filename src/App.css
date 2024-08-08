@@ -1,0 +1,6 @@
+#main {
+    top: 10%;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
