@@ -115,7 +115,9 @@ function build() {
 }
 
 function Home() {
+    
   return (
+    
         <div className="home">
             <div id="name">
                 <MyTypewriter id="name" type={0} string={text[0][0]} doesLoop={true} class={"typeWriterMain"} delay={999999999999999} speed={40 /text[0][0].length} />
