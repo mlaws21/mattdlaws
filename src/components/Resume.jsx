@@ -1,11 +1,23 @@
-import "./style/Resume.css"
-function Resume() {
-    return (
-        <div>
+import "./style/Resume.css";
 
-            <object aria-label="Resume" id="resume" width="100%" height="100%" data={"./resume.pdf"} type="application/pdf"></object>
-        </div>
-    )
+function Resume() {
+  return (
+    <div>
+      <object
+        aria-label="Resume"
+        id="resume"
+        width="100%"
+        height="100%"
+        data={"/resume.pdf"}
+        type="application/pdf"
+      >
+        <p>
+          It seems your browser cannot display the PDF.{" "}
+          <a href="/resume.pdf" download>Click here to download it.</a>
+        </p>
+      </object>
+    </div>
+  );
 }
 
 export default Resume;

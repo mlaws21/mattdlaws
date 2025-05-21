@@ -7,7 +7,9 @@ import Navbar from './components/Navbar.jsx';
 import Contact from './components/Contact.jsx';
 import Projects from './components/Projects.jsx';
 import Resume from './components/Resume.jsx';
+import CV from './components/CV.jsx';
 import Error from './components/Error.jsx';
+
 
 
 
@@ -25,6 +27,8 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/resume' element={<Resume />} />
+          <Route path='/cv' element={<CV />} />
+
 
 
           <Route path='*' element={<Error />} />

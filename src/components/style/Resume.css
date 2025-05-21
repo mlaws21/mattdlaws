@@ -1,3 +1,5 @@
 #resume {
-    position: absolute;
+
+    position: fixed;
+    top: 1%;
 }

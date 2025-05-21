@@ -1,83 +1,64 @@
 [
+
   {
-    "title": "NHPT Evaluation",
-    "bigTitle": "Automatic Evaluation of the Nine Hole Peg Test",
-    "description": "Working in the AI/ML department at Sanofi, I developed a tool capabale of evaluating a patients performance on the NHPT solely from a video of the test. The NHPT is one of the most widely used arm mobility tests in clinical practice.",
-    "link": "https://arxiv.org/abs/0000.00000",
-    "linkText": "Click here to see the paper",
-    "image": "./images/nhpt1.png",
-    "bigImage": "./images/nhpt.png"
+    "title": "Needfinding",
+    "bigTitle": "Exploring Needfinding in Strava: A Deeper Look into Fitness Tracking",
+    "description": "This project applies human-computer interaction (HCI) techniques to evaluate how effectively Strava meets the needs of diverse users. Through structured user interviews with athletes across different sports, I identified pain points in Strava’s design, particularly around non-endurance activities, indoor workouts, and users without smartwatches.",
+    "link": "https://medium.com/@mdl4/exploring-needfinding-in-strava-a-deeper-look-into-fitness-tracking-ac67d7f89b28",
+    "linkText": "Click here to see Medium Post",
+    "image": "./images/strava_icon.png",
+    "bigImage": "./images/strava.png"
+  },
+
+  {
+    "title": "Redesign",
+    "bigTitle": "Redesigning the Ephs Patient Portal",
+    "description": "In this project our team set out to redesign Williams College’s Ephs Patient Portal, to improve usability and accessibility. We analyzed the existing portal’s weaknesses, identified key areas for improvement, and proposed design solutions to enhance user experience. Finally, using Figma we came up with a prototype that incorporated a modern, intuitive layout that aligns with Williams College’s branding. Our redesign aims to streamline the portal’s functionality, making it easier for students to access critical health resources efficiently.",
+    "link": "https://medium.com/@ar30_72964/ds2-aaaba42836d7",
+    "linkText": "Click here to see Medium Post",
+    "image": "./images/redesign_icon.png",
+    "bigImage": "./images/redesign.png"
+  },
+
+  {
+    "title": "Interactivity",
+    "bigTitle": "Designing Gesture-Based Interactions for 2048",
+    "description": "In this project, we developed a gesture-controlled version of the puzzle game 2048 using MediaPipe and custom logic to map hand gestures to game commands. We implemented intuitive gesture mappings prioritizing simplicity, responsiveness, and error prevention. Through formative testing and iterative design, we created a system that balances natural user input with gameplay accuracy, demonstrating how gesture-based interaction can enhance accessibility in casual games.",
+    "link": "https://medium.com/@rms7/ds3-designing-for-interactivity-in-2048-87c8d56be520",
+    "linkText": "Click here to see Medium Post",
+    "image": "./images/2048_icon.png",
+    "bigImage": "./images/2048.png"
   },
   {
-    "title": "ASL Interpreter",
-    "bigTitle": "Computer Vision ASL Interpreter",
-    "description": "Used machine learning to develop an American Sign Language (ASL) letter Interpreter. Obtained a 97% test accuracy on unseen test data, 95% accuracy of correctly predicting 6 letter words and includes a live video translation feature.",
-    "link": "https://github.com/mlaws21/ASL-Interpreter",
-    "linkText": "Click here to see the repo",
-    "image": "./images/skin+base.png",
-    "bigImage": "./images/asl.png"
+    "title": "Effectiveness",
+    "bigTitle": "Redesigning a Bookstore Catalog",
+    "description": "Our team was tasked with redesigning a basic online bookstore catalog website. The starter site had no clear visual structure, purpose, or navigation. This made it difficult for users to browse or find books efficiently. Our goal was to rethink the layout using Bootstrap and HCI principles to build something more discoverable, intuitive, and modern.",
+    "link": "https://medium.com/@ndc2/ds3-redesigning-a-bookstore-catalog-54095c750b52",
+    "linkText": "Click here to see Medium Post",
+    "image": "./images/book_icon.png",
+    "bigImage": "./images/book.png"
   },
+
   {
-    "title": "Causal Selection",
-    "bigTitle": "Improving Machine Learning Algorithms with Causal Inference",
-    "description": "Developed an easy to use framework for pruning feature spaces when training ML models using Causal Inference. Improved test accuracy by up to 50% when reducing feature space by more than 50%.",
-    "link": "https://github.com/mlaws21/Causal-Feature-Finding",
-    "linkText": "Click here to see the repo",
-    "image": "./images/cff1.png",
-    "bigImage": "./images/cff.png"
+    "title": "Accessibility",
+    "bigTitle": "Accessibility Audit of YouTube for People with Physical/Motor Disabilities",
+    "description": "This project evaluates YouTube’s accessibility for users with physical or motor disabilities. It connects design theory (universal, inclusive, and value-sensitive design) to real user experiences, referencing accessibility standards like WCAG 2.1 and Section 508. It includes firsthand accounts from Reddit to identify specific barriers—like small skip buttons, timed prompts, and gesture-only controls—and provides clear design recommendations to make YouTube more usable and equitable.",
+    "link": "https://medium.com/@mdl4/todo-595aba6560f4",
+    "linkText": "Click here to see Medium Post",
+    "image": "./images/youtube_icon.jpeg",
+    "bigImage": "./images/youtube.png"
   },
+
   {
-    "title": "Rank and Select",
-    "bigTitle": "SPIDER: Improved Succinct Rank and Select Performance",
-    "description": "Worked with Professor Sam McCauley to develop a faster Succinct Rank and Select Data Structure. Developed theoretical algorithms, implemented, and optimized them in C. Was made first author on the paper and presented my research in a talk at the Symposium on Experimental Algorithms 2024.",
-    "link": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SEA.2024.21",
-    "linkText": "Click here to view the publication",
-    "image": "./images/sea.png",
-    "bigImage": "./images/soundQuest.png"
-  },
-  {
-    "title": "SoundQuest",
-    "bigTitle": "Song Trivia Game",
-    "description": "Developed a local multiplayer song trivia game that generates \"guess the song\" style questions based on a spotify playlist. Built from scratch using react and the spotify API.",
-    "link": "https://github.com/mlaws21/Causal-Feature-Finding",
-    "linkText": "Click here to see the repo",
-    "image": "./images/soundQuest1.png",
-    "bigImage": "./images/soundQuest.png"
-  },
-  {
-    "title": "WRFC Website",
-    "bigTitle": "Williams College Rugby Football Club Website",
-    "description": "Developed a website for my club rugby team from scratch using React and host it using AWS s3 services.",
-    "link": "http://williamscollegerugby.com/",
-    "linkText": "Click here to view the site",
-    "image": "./images/wrfc.png",
-    "bigImage": "./images/wrfcPage.png"
-  },
-  {
-    "title": "Stochastic Parody",
-    "bigTitle": "Parody Generating Programming Language",
-    "description": "Used F# to develop a programming language that can generate song parodies according to basic annotations",
-    "link": "https://github.com/mlaws21/Stochastic-Parody",
-    "linkText": "Click here to see the repo",
-    "image": "./images/sp.png",
-    "bigImage": "./images/spb.png"
-  },
-  {
-    "title": "Snar Delivery",
-    "bigTitle": "Food Delivery App Built on SUI Blockchain",
-    "description": "Used Sui Move to publish a smart contract along with React to develop a doordash-like app for Williams. Transactions are completed using the SUI crypto currency. Project was awarded 1st Place at the Williams College x Mysten Labs Hackathon 2024.",
-    "link": "https://snar-delivery.vercel.app/",
-    "linkText": "Click here to see the site",
-    "image": "./images/sd.png",
-    "bigImage": "./images/sdb.png"
-  },
-  {
-    "title": "Mini Golf",
-    "bigTitle": "9 Hole 3-Dimensional Mini Golf Game",
-    "description": "Created a ray traced 3D Mini Golf game with blinn-phong lighting and realistic collisions using OpenGL",
-    "link": "https://youtu.be/IVGg3OhPSVQ?si=B1rMTCWT8xUgzpU_",
-    "linkText": "Click here to view a demo",
-    "image": "./images/minigolf.png",
-    "bigImage": "./images/minigolf.png"
+    "title": "Pulse",
+    "bigTitle": "Pulse: A Chrome Extension for Productivity",
+    "description": "Pulse is a Chrome extension that helps users stay focused by setting work session goals and gently reminding them when they get distracted. The team prioritized simplicity, user feedback, and accessibility. Key features include a clean timer setup interface, motivational pop-ups when users switch tabs, and alerts at the end of sessions. User testing shaped refinements like improved input formatting and softer sounds. Pulse emphasizes low-friction, goal-oriented productivity without blocking user behavior.",
+    "link": "https://medium.com/@ndc2/pulse-a-chrome-extension-to-help-you-stay-on-task-d66606dd2929",
+    "linkText": "Click here to see Medium Post",
+    "image": "./images/timer_icon.png",
+    "bigImage": "./images/timer.png"
   }
+
 ]
+
+

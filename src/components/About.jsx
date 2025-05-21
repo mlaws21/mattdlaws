@@ -9,11 +9,12 @@ function About() {
 
             <div className="right">
                 <p id="blurb">{blurb}</p>
-                <a id="resLink" href={"/resume"}>Here is my Resume </a>
+                <p id="resLink">Here is my <a id="resLink" href={"/cv"}>CV</a> | <a id="resLink" href={"/resume"}> Resume </a></p>
+
             </div>
 
             <div>
-                <img id="meImg" src={me}/>
+                <img id="meImg" alt="author's face" src={me}/>
 
             </div>
             

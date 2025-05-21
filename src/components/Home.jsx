@@ -1,13 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
-import { Component, Fragment } from 'react'
 import Typewriter from "typewriter-effect";
 import text from '../Data/homeMessage.jsx';
 import "./style/Home.css";
 
 
-const duration = 1000; // ms
-const delay = 500; // ms
+// const delay = 1000; // ms
 // const animStr = (i) => `fadeIn ${duration}ms ease-out ${delay * i}ms forwards`;
 
 // var speeeeed = 0;
@@ -21,7 +19,7 @@ function MyData(names, i=0) {
   function setNextName() {
     i++
     let newName = names[i%(names.length)]
-    if (newName == currentName) { setNextName() }
+    if (newName === currentName) { setNextName() }
     else { setCurrentName(newName) }
     return
   }
@@ -29,7 +27,7 @@ function MyData(names, i=0) {
   useEffect(() => {
     setTimeout(() => {
         setNextName()
-    }, 3000);
+    }, 5000);
   }, [currentName])
 
   return (
@@ -50,7 +48,7 @@ function MyData(names, i=0) {
     }
 
     render() {
-        const timer = () => {setTimeout(() => this.state.currentWord = (this.state.currentWord + 1) % this.props.length, 3000)}
+        const timer = () => {setTimeout(() => this.state.currentWord = (this.state.currentWord + 1) % this.props.length, 5000)}
 
         return (
 
