@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
 
 
-.font-loader {
+/* .fontloader {
     font-family: 'Titillium Web', sans-serif;
-    /* font-size: 1vw; */
     font-weight: bold;
     text-decoration: none;
     color: rgb(0, 204, 255);
 
 
- }
+ } */
 
  .cycleData {
     /* text-shadow: 0 0 0.5vw rgb(0, 204, 255); */
@@ -52,7 +51,6 @@
     /* font-size: 1vw; */
     font-weight: bolder;
     text-decoration: none;
-    color: rgb(0, 204, 255);
     padding-top: 0;
     margin-top: 0;
     height: 4vw;
@@ -69,7 +67,6 @@
     /* font-size: 1vw; */
     font-weight: bold;
     text-decoration: none;
-    color: rgb(0, 204, 255);
 
 }
 
@@ -88,6 +85,8 @@
 
  * {
     background: rgb(23, 23, 23);
+    color: rgb(238, 202, 255);
+
  }
 
  @media (max-width: 1000px) {

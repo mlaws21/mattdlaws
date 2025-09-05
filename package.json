@@ -21,7 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sync": "aws s3 sync ./build 's3://mattdlaws.com/'",
-    "upload": "react-scripts build; aws s3 sync ./build 's3://mattdlaws.com/'"
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E1ASZKBZML6CKB --paths '/*'",
+    "upload": "react-scripts build; aws s3 sync ./build 's3://mattdlaws.com/'; aws cloudfront create-invalidation --distribution-id E1ASZKBZML6CKB --paths '/*'"
   },
   "eslintConfig": {
     "extends": [

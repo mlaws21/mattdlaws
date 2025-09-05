@@ -1,13 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
-import { Component, Fragment } from 'react'
 import Typewriter from "typewriter-effect";
 import text from '../Data/homeMessage.jsx';
-import "./style/Home.css";
+import style from "./style/Home.module.css";
 
 
-const duration = 1000; // ms
-const delay = 500; // ms
+// const delay = 1000; // ms
 // const animStr = (i) => `fadeIn ${duration}ms ease-out ${delay * i}ms forwards`;
 
 // var speeeeed = 0;
@@ -21,7 +19,7 @@ function MyData(names, i=0) {
   function setNextName() {
     i++
     let newName = names[i%(names.length)]
-    if (newName == currentName) { setNextName() }
+    if (newName === currentName) { setNextName() }
     else { setCurrentName(newName) }
     return
   }
@@ -29,7 +27,7 @@ function MyData(names, i=0) {
   useEffect(() => {
     setTimeout(() => {
         setNextName()
-    }, 3000);
+    }, 5000);
   }, [currentName])
 
   return (
@@ -50,7 +48,7 @@ function MyData(names, i=0) {
     }
 
     render() {
-        const timer = () => {setTimeout(() => this.state.currentWord = (this.state.currentWord + 1) % this.props.length, 3000)}
+        const timer = () => {setTimeout(() => this.state.currentWord = (this.state.currentWord + 1) % this.props.length, 5000)}
 
         return (
 
@@ -109,18 +107,20 @@ function build() {
     var all = [];
     var labels = text[2]
     for (var i = 1; i < text[0].length; i++) {
-        all.push(<MyTypewriter type={0} string={text[2][i]} doesLoop={true} class={"typeWriterData"} speed={40 / text[2][i].length} delay={999999999999999} delete={20 / text[2][i][0].length} />)
-        all.push(<div className="cycleData">{MyData(text[0][i])}</div>)
-        all.push(<div className="cycleData"><MyXData words={text[0][i]} length={text[0][i].length}/></div>)
+        all.push(<MyTypewriter type={0} string={text[2][i]} doesLoop={true} class={style.typeWriterData} speed={40 / text[2][i].length} delay={999999999999999} delete={20 / text[2][i][0].length} />)
+        all.push(<div className={style.cycleData}>{MyData(text[0][i])}</div>)
+        all.push(<div className={style.cycleData}><MyXData words={text[0][i]} length={text[0][i].length}/></div>)
     }
     return (all);
 }
 
 function Home() {
+    
   return (
-        <div className="home">
-            <div id="name">
-                <MyTypewriter id="name" type={0} string={text[0][0]} doesLoop={true} class={"typeWriterMain"} delay={999999999999999} speed={40 /text[0][0].length} />
+    
+        <div className={style.home}>
+            <div id={style.name}>
+                <MyTypewriter id={style.name} type={0} string={text[0][0]} doesLoop={true} class={style.typeWriterMain} delay={999999999999999} speed={40 /text[0][0].length} />
             </div>
             {/* <MyTypewriter id="name" type={1} string={text[0][1]} doesLoop={text[1][0]} class={"typeWriterMain"} delay={999999999999999}/> */}
             {build()}

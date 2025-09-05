@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./style/Projects.css";
+import style from "./style/Projects.module.css";
 
 class ProjContainer extends React.Component {
   constructor(props) {
@@ -17,25 +17,25 @@ class ProjContainer extends React.Component {
   render() {
     if (this.state.status) {
       return (
-        <div className="projClose" onClick={this.handleClick}>
-          <p className="projTitle">{this.props.title}</p>
-          <img className="img" src={this.props.image} alt={this.props.title} />
+        <div className={style.projClose} onClick={this.handleClick}>
+          <p className={style.projTitle}>{this.props.title}</p>
+          <img className={style.img} src={this.props.image} alt={this.props.title} />
         </div>
       );
     } else {
       return (
         <div>
-          <div id="else" onClick={this.handleClick}></div>
-          <div className="projClose">
-            <p className="projTitle">{this.props.title}</p>
-            <img className="img" src={this.props.image} alt={this.props.title} />
+          <div id={style.else} onClick={this.handleClick}></div>
+          <div className={style.projClose}>
+            <p className={style.projTitle}>{this.props.title}</p>
+            <img className={style.img} src={this.props.image} alt={this.props.title} />
           </div>
-          <div className="projOpen">
-            <p className="bigTitle">{this.props.exTitle}</p>
-            <p id="description">{this.props.description}</p>
-            <div id="demo">
-              <img id="bigImage" src={this.props.bigImage} alt={this.props.exTitle} />
-              <a id="link" href={this.props.link} target="_blank" rel="noopener noreferrer">
+          <div className={style.projOpen}>
+            <p className={style.bigTitle}>{this.props.exTitle}</p>
+            <p id={style.description}>{this.props.description}</p>
+            <div id={style.demo}>
+              <img id={style.bigImage} src={this.props.bigImage} alt={this.props.exTitle} />
+              <a id={style.link} href={this.props.link} target="_blank" rel="noopener noreferrer">
                 {this.props.linkDescription}
               </a>
             </div>
@@ -83,7 +83,7 @@ const Projects = () => {
     ));
   };
 
-  return <div id="projects">{projects.length > 0 ? build() : <p>Loading projects...</p>}</div>;
+  return <div id={style.projects}>{projects.length > 0 ? build() : <p>Loading projects...</p>}</div>;
 };
 
 export default Projects

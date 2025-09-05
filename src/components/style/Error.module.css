@@ -1,0 +1,12 @@
+.errcontainer {
+    display: grid;
+    place-items: center;   /* shorthand for justify + align */
+    height: 70vh;
+  }
+  
+#err {
+    font-size: 3vw;
+    color: rgb(0, 204, 255);
+    text-align: center;
+    line-height: 10vh;
+  }

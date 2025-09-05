@@ -1,7 +1,9 @@
+import "./style/Home.module.css";
+
 function Error() {
     return (
-        <div>
-            <h1>Error 404 - Page Not Found</h1>
+        <div className="errcontainer">
+            <h1 id="err">Error 404 - Page Not Found</h1>
         </div>
     )
 }

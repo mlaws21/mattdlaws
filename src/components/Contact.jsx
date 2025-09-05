@@ -1,21 +1,18 @@
-import "./style/Contact.css";
+import style from "./style/Contact.module.css";
 import gmail from './images/gmail.png';
 import linkedin from './images/linkedin.png';
 import github from './images/github.png';
-
-
-
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 
 
 class Handle extends React.Component {
 
     render() {
         return (
-            <div id="com">
-                <img className="logoImg" src={this.props.image} alt="logo" />
-                <p className="cText" id="cLink">{this.props.site}: {this.props.link}</p>
+            <div id={style.com}>
+                <img className={style.logoImg} src={this.props.image} alt="logo" />
+                <p className={style.cText} id={style.cLink}>{this.props.site}: {this.props.link}</p>
             </div>
         )
     }
@@ -24,8 +21,8 @@ class Handle extends React.Component {
 function Contact() {
     return (
         <div>
-            <p className="cText" id="cTitle">Find me at:</p>
-            <Handle image={gmail} site="Email" link="mdl4@williams.edu"/>
+            <p className={style.cText} id={style.cTitle}>Find me at:</p>
+            <Handle image={gmail} site="Email" link="laws.ma@northeastern.edu"/>
             <Handle image={linkedin} site="Linkedin" link="linkedin.com/in/matt-d-laws/"/>
             <Handle image={github} site="Github" link="github.com/mlaws21/"/>
 

@@ -14,14 +14,11 @@ header img {
 
 }
 
-.font-loader {
-    text-shadow: 0 0 0.5vw rgb(0, 204, 255);
-
+.fontloader {
     font-family: 'Titillium Web', sans-serif;
     font-size: 2vw;
     font-weight: bold;
     text-decoration: none;
-    color: rgb(0, 204, 255);
 
 
  }
@@ -76,10 +73,7 @@ header li {
     
 
 }
-
 header li a {
-
-    color: rgb(0, 204, 255);
 
     text-decoration: none;
 }

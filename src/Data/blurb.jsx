@@ -1,3 +1,9 @@
-const blurb = "I am a Senior Computer Science Major at Williams College, interested in Machine Learning and Computer Vision, Software Engineering, and Operating Systems. This year I am taking over as Lead Developer / President for Williams's Student Website and Mobile App. I most recently interned at Sanofi, a leading company in the pharmaceutical industry, in their AI/ML department working on a toolkit for clinical trial evaluation. I also have experience in Succinct Data Structures Research working on a space efficient Rank and Select Structure as will as software development experience working on creating a regression testing engine for IAS's Twitter brand safety pipeline. I enjoy developing games, creating machine learning algorithms to answer interesting questions, and building websites using React hosted using AWS s3. I also am the Captain of the Rugby Team at Williams and enjoy camping."
+const blurb = (
+    <p>
+
+        I am a PhD student at Northeastern University working in the NDS2 Lab advised by <u>Professor Cristina Nita-Rotaru</u>. My current work focuses on security in LLM-based Agentic AI systems. Previously I graduated from Williams College with Highest Honors in Computer Science. There, I published a paper in the field of experimental Algorithms along side <u>Professor Sam McCauley</u>, and for my undergradute thesis I worked on causal inference with protein sequences advised by <u>Professor Rohit Bhattacharya</u>.
+
+    </p>
+)
 
 export default blurb;
