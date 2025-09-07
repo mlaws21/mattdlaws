@@ -1,0 +1,31 @@
+[
+
+  {
+    "date": "Sept 2025",
+    "title": "Started PhD in the NDS2 Lab at Northeastern working with Professor Cristina Nita Rotaru!",
+    "link": "https://nds2.ccs.neu.edu/"
+  },
+
+  {
+    "date": "June 2025",
+    "title": "I graduated cum laude from Williams College with highest honors in Computer Science! I was also inducted to Sigma Xi, the Scientific Research Honor Society.",
+    "link": "https://www.sigmaxi.org/"
+  },
+  {
+    "date": "May 2025",
+    "title": "Successfully defended my undergraduate thesis. The presentation was awarded Sam Goldberg Colloquium Prize in Computer Science for best thesis defense!",
+    "link": "https://librarysearch.williams.edu/discovery/delivery/01WIL_INST:01WIL_SPECIAL/12431114170002786"
+  },
+
+    {
+    "date": "May 2025",
+    "title": "Presented talk: \"Causal Inference with Protein Sequences: Biologically Plausible Dimension Reduction Using AlphaFold\" at the American Causal Inference Conference (ACIC)!",
+    "link": "/acic_talk.pdf"
+  },
+  {
+    "date": "Mar 2024",
+    "title": "Paper \"SPIDER: Improved Succinct Rank and Select Performance\" Accepted to the Symposium on Experimental Algorithms (SEA)!",
+    "link": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SEA.2024.21"
+
+  }
+]

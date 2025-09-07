@@ -1,139 +1,195 @@
-import React from 'react';
-import { useState, useEffect } from 'react'
-import Typewriter from "typewriter-effect";
-import text from '../Data/homeMessage.jsx';
-import style from "./style/Home.module.css";
+import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faGraduationCap, faFileAlt, faIdBadge } from "@fortawesome/free-solid-svg-icons";
+import style from './style/Home.module.css'
+import blurb from "../Data/blurb";
+import newsData from "../Data/news.json";
+import pubData from "../Data/pubs.json"
+import talkData from "../Data/talks.json"
+import teachingData from "../Data/teaching.json"
 
 
-// const delay = 1000; // ms
-// const animStr = (i) => `fadeIn ${duration}ms ease-out ${delay * i}ms forwards`;
-
-// var speeeeed = 0;
 
 
-// var i = 0
 
-function MyData(names, i=0) {
-    const [currentName, setCurrentName] = useState(names[0]);
 
-  function setNextName() {
-    i++
-    let newName = names[i%(names.length)]
-    if (newName === currentName) { setNextName() }
-    else { setCurrentName(newName) }
-    return
-  }
+const iconMap = {
+  GitHub: faGithub,
+  LinkedIn: faLinkedin,
+  Email: faEnvelope,
+  Resume: faFileAlt,
+  "Google Scholar": faGraduationCap,
+
+};
+
+const Socials = () => {
+  const [socials, setSocials] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
-        setNextName()
-    }, 5000);
-  }, [currentName])
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/socials.json");
+        const json = await res.json();
+        setSocials(json);
+      } catch (err) {
+        console.error("Error loading socials:", err);
+      }
+    };
+    fetchData();
+  }, []);
 
-  return (
-    <div>
-      {/* <h1 className="data">{currentName}</h1> */}
-    </div>
-  )
-
+  if (!socials.length) {
+    return <p>Loading socials...</p>;
   }
 
-  class MyXData extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            
-            currentWord: 0
-        }
-    }
-
-    render() {
-        const timer = () => {setTimeout(() => this.state.currentWord = (this.state.currentWord + 1) % this.props.length, 5000)}
-
-        return (
-
-            <div onClick={timer()}>{this.props.words[this.state.currentWord]}
-            </div>
-            
-        )
-    }
-  }
-
-
-class MyTypewriter extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            cursor: "|",
-            delay: this.props.delay,
-        }
-    }
-
-    render() {
-        // if (this.props.type === 0) {
-            return (
-                
-        <Typewriter
-            options={{
-                // strings: this.props.string,
-                skipAddStyles: true,
-                autoStart: true,
-                loop: this.props.doesLoop,
-                wrapperClassName: this.props.class,
-                cursorClassName: this.props.class,
-                deleteSpeed: this.state.delete,
-                delay: this.props.speed, 
-                cursor: "",
-
-            }}
-                onInit={(typewriter) => {
-
-                    typewriter
-                        .typeString(this.props.string[0])
-                        // .callFunction(() => {this.state.cursor = })
-                        .pauseFor(this.props.delay)
-                        .deleteAll()
-                        .start()
-                        
-                }}
-            />
-            )
-
-    }
-}
-
-function build() {
-    var all = [];
-    var labels = text[2]
-    for (var i = 1; i < text[0].length; i++) {
-        all.push(<MyTypewriter type={0} string={text[2][i]} doesLoop={true} class={style.typeWriterData} speed={40 / text[2][i].length} delay={999999999999999} delete={20 / text[2][i][0].length} />)
-        all.push(<div className={style.cycleData}>{MyData(text[0][i])}</div>)
-        all.push(<div className={style.cycleData}><MyXData words={text[0][i]} length={text[0][i].length}/></div>)
-    }
-    return (all);
-}
-
-function Home() {
-    
   return (
-    
-        <div className={style.home}>
-            <div id={style.name}>
-                <MyTypewriter id={style.name} type={0} string={text[0][0]} doesLoop={true} class={style.typeWriterMain} delay={999999999999999} speed={40 /text[0][0].length} />
-            </div>
-            {/* <MyTypewriter id="name" type={1} string={text[0][1]} doesLoop={text[1][0]} class={"typeWriterMain"} delay={999999999999999}/> */}
-            {build()}
-            {/* {MyData(["a", "b", "c", "d"])} */}
-            {/* {items.map((item, i) => (
-            <h1 key={i} style={{ animation: animStr(i) }}>
-                {item}
-            </h1>
-            ))} */}
-
-            {/* <Rotater strs={["test"]} style={{ animation: animStr(i) }}/> */}
+    <div className={style.home}>
+        <div className={style.section}>
+        {socials.map((s, i) => (
+            <a
+            key={i}
+            href={s.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={s.name}
+            >
+            <FontAwesomeIcon icon={iconMap[s.name]} size="2x" className="social-icon" />
+            </a>
+        ))}
         </div>
-  );
-}
 
-export default Home;
+        <div className={style.section}>
+            <h1 className={style.sectiontitle}>About</h1>
+            <div className={style.about}>{blurb}</div>
+        </div>
+
+
+        <div className={style.section}>
+            <h1 className={style.sectiontitle}>News</h1>
+
+            <div className={style.scrollbox} role="list">
+                {newsData.map((n, i) => (
+                <article key={i} className={style.item} role="listitem">
+                    <div className={style.meta}>
+                        {n.date}
+                    </div>
+
+                    {n.link ? (
+                    <a
+                        href={n.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={style.title}
+                    >
+                        {n.title}
+                    </a>
+                    ) : (
+                    <div className={style.title}>{n.title}</div>
+                    )}
+                </article>
+                ))}
+            </div>
+        </div>
+
+        <div className={style.section}>
+            <h1 className={style.sectiontitle}>Education</h1>
+            <ul className={style.paperlist}>
+                <li>
+                    <strong>PhD in Computer Science</strong>, Northeastern University <em>(Current)</em>
+                </li>
+                <li>
+                    <strong>BA in Computer Science</strong>, Williams College (2025)
+                </li>
+            </ul>
+        </div>
+
+        <div className={style.section}>
+            <h1 className={style.sectiontitle}>Publications</h1>
+            <ul className={style.paperlist}>
+                {pubData.map((p, i) => (
+                    <li key={i} className={style.litem}>
+                    <a
+                        href={p.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={style.papertitle}
+                    >
+                        {p.title}
+                    </a>
+
+                    <div className={style.meta}>
+                    <span className={style.authors}>
+                        {p.authors.map((author, idx) => (
+                            <span
+                            key={idx}
+                            className={author === "Matthew D. Laws" ? style.underline : ""}
+                            >
+                            {author}
+                            {idx < p.authors.length - 1 && ", "}
+                            </span>
+                        ))}
+                        </span>
+                        {" • "}
+                        <span className={style.conference}>{p.conference}</span>
+                        {" • "}
+                        <span className={style.when}>{p.when}</span>
+                    </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
+
+
+        <div className={style.section}>
+            <h1 className={style.sectiontitle}>Talks</h1>
+            <ul className={style.paperlist}>
+                {talkData.map((p, i) => (
+                    <li key={i} className={style.litem}>
+                    <a
+                        href={p.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={style.papertitle}
+                    >
+                        {p.title}
+                    </a>
+
+                    <div className={style.meta}>
+                        <span className={style.conference}>{p.conference}</span>
+                        {" • "}
+                        <span className={style.when}>{p.when}</span>
+                    </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
+        
+        <div className={style.section}>
+            <h1 className={style.sectiontitle}>Teaching</h1>
+            <ul className={style.paperlist}>
+                {teachingData.map((p, i) => (
+                    <li key={i} className={style.litem}>
+                        {p.title}
+
+                    <div className={style.meta}>
+                        <span className={style.when}>{p.where}</span>
+                        {" • "}
+                        <span className={style.conference}>{p.position}</span>
+                        {" • "}
+                        <span className={style.when}>{p.when}</span>
+                    </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
+
+
+
+
+
+    </div>
+  );
+};
+
+export default Socials;

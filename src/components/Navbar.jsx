@@ -23,10 +23,6 @@ function Navbar() {
                     </li>
 
                     <li>
-                        <a className={style.navItem} href='/publications'>Publications</a>
-                    </li>
-
-                    <li>
                         <a className={style.navItem} href='/projects'>Projects</a>
                     </li>
 

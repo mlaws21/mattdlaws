@@ -1,110 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;500;600;700&display=swap');
+
+.home {
+  padding-left: 4%;
+  padding-right: 4%;
+
+}
 
 
-/* .fontloader {
+
+.about {
+  font-size: 1.5vw;
+}
+
+.section { 
+  padding-bottom: 2%;
+}
+
+.sectiontitle {
+  font-weight: 700;
+}
+
+strong, b {
+  font-weight: 700; /* or 600 if you prefer */
+}
+
+li {
+  padding-bottom: 0.7vh;
+  font-size: 1.5vw;
+
+}
+
+.paperlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.underline {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+
+
+.authors {
+  font-style: italic;
+}
+
+.papertitle {
+  font-size: 1.5vw;
+}
+
+.papertitle {
+  font-size: 1.5vw;
+}
+
+
+* {
+  font-weight: 300;
+    background: rgb(23, 23, 23);
+    color: rgb(238, 202, 255);
     font-family: 'Titillium Web', sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    color: rgb(0, 204, 255);
+
+}
+
+.sectiontitle {
+  margin: 0 0 2vh 0;  /* instead of 12px */
+  font-size: 2.5vw;   /* scales with width */
+  line-height: 1.2;
+}
+
+.scrollbox {
+  max-height: 25vh;   /* scales with height */
+  overflow-y: auto;
+  border: 0.1vw solid rgba(255,255,255,0.15);
+  border-radius: 1vw;
+  padding: 1vw;
+  background: rgba(255,255,255,0.02);
+}
+
+.item + .item {
+  border-top: 0.1vw solid rgba(255,255,255,0.08);
+  margin-top: 1vh;
+  padding-top: 1vh;
+}
+
+.item {
+
+  padding-left: 0.7vw;
+  border-radius: 0.5vw;
+  padding-bottom: 0.2vh;
+  padding-top: 0;
+
+}
 
 
- } */
+.meta {
+  font-size: 1.3vw;
+  opacity: 0.8;
+  margin-bottom: 0.3vh;
+  font-weight: 600;
 
- .cycleData {
-    /* text-shadow: 0 0 0.5vw rgb(0, 204, 255); */
-
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 2vw;
-    font-weight: bold;
-    text-decoration: none;
-    color: rgb(0, 204, 255);
- }
-
- @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-/* .block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    border-bottom: 1px solid rgba(255, 255, 255. 0.2);
 
 }
 
 .title {
-    text-align: center;
-    font-size: 100;
-} */
-.typeWriterMain {
-    /* text-shadow: 0 0 1vw rgb(0, 204, 255); */
-    font-size: 5vw;
-    font-family: 'Titillium Web', sans-serif;
-    /* font-size: 1vw; */
-    font-weight: bolder;
-    text-decoration: none;
-    padding-top: 0;
-    margin-top: 0;
-    height: 4vw;
-    display:block;
+  font-weight: 300;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5vh;
+  font-size: 1.2vw;
 }
 
-.typeWriterData {
-    /* text-shadow: 0 0 0.5vw rgb(0, 204, 255); */
-
-    font-size: 2.5vw;
-    height: 2vw;
-    display:block;
-    font-family: 'Titillium Web', sans-serif;
-    /* font-size: 1vw; */
-    font-weight: bold;
-    text-decoration: none;
-
+.title:hover {
+  text-decoration: underline;
 }
 
-/* #test {
-} */
- #name {
-    
-    padding-top: 3vw;
- }
 
- .home {
-   top: 10%;
-   background: rgb(23, 23, 23);
-   text-align: center;
- }
-
- * {
-    background: rgb(23, 23, 23);
-    color: rgb(238, 202, 255);
-
- }
 
  @media (max-width: 1000px) {
-  .typeWriterMain {
-    font-size: 12vw;
-    height: 10vw;
 
-}
-
-  .cycleData {
-    font-size: 4vw;
-    height: 8vw;
-  }
-
-  .typeWriterData {
-    /* text-shadow: 0 0 0.5vw rgb(0, 204, 255); */
-    height: 0vw;
-    font-size: 5vw;
-
-}
  }
+

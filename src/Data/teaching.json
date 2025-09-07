@@ -1,0 +1,33 @@
+[
+  {
+    "title": "CS 3650: Computer Systems",
+    "where": "Northeastern University",
+    "position": "Teaching Assistant",
+    "when": "Fall 2025"
+  }, 
+  {
+    "title": "CSCI 345: Robotics and Digital Fabrication",
+    "where": "Williams College",
+    "position": "Teaching Assistant",
+    "when": "Spring 2025"
+  }, 
+  {
+    "title": "CSCI 381: Deep Learning",
+    "where": "Williams College",
+    "position": "Teaching Assistant",
+    "when": "Fall 2024"
+  }, 
+  {
+    "title": "CSCI 237: Computer Organization",
+    "where": "Williams College",
+    "position": "Teaching Assistant",
+    "when": "Spring 2023; Fall 2023; Spring 2024"
+  }, 
+  {
+    "title": "CSCI 136: Data Structures & Advanced Programming",
+    "where": "Williams College",
+    "position": "Teaching Assistant",
+    "when": "Fall 2022"
+  }
+
+]

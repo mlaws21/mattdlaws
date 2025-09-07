@@ -24,7 +24,6 @@ function App() {
       <div id="main">
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/publications' element={<Publications />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/projects' element={<Projects />} />
