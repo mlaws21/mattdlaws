@@ -1,9 +1,9 @@
 
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
-import Navbar from './components/Navbar.jsx';
 import Contact from './components/Contact.jsx';
 import Projects from './components/Projects.jsx';
 import Resume from './components/Resume.jsx';
@@ -19,8 +19,7 @@ import Error from './components/Error.jsx';
 
 function App() {
   return (
-    <div>
-      < Navbar />
+    <ThemeProvider>
       <div id="main">
         <Routes>
           <Route path='/' element={<Home />} />
@@ -39,7 +38,7 @@ function App() {
 
         </Routes>
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 

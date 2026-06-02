@@ -3,10 +3,7 @@ import style from './style/Navbar.module.css'
 import logo from './images/neulogo.png';
 import React from 'react';
 
-
-
 function Navbar() {
-    
     return (
         
         <header id={style.navbar}>

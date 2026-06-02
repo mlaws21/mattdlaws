@@ -1,13 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faGraduationCap, faFileAlt, faIdBadge } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faGraduationCap, faFileAlt, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import style from './style/Home.module.css'
+import { useTheme } from "../context/ThemeContext";
 import blurb from "../Data/blurb";
 import newsData from "../Data/news.json";
 import pubData from "../Data/pubs.json"
 import talkData from "../Data/talks.json"
 import teachingData from "../Data/teaching.json"
+import headshot from "./images/headshot.JPG";
+
+const SECTIONS = [
+  { id: "about", label: "About" },
+  { id: "news", label: "News" },
+  { id: "education", label: "Education" },
+  { id: "publications", label: "Publications" },
+  { id: "talks", label: "Talks" },
+  { id: "teaching", label: "Teaching" },
+];
 
 
 
@@ -23,7 +34,8 @@ const iconMap = {
 
 };
 
-const Socials = () => {
+const Home = () => {
+  const { theme, toggleTheme } = useTheme();
   const [socials, setSocials] = useState([]);
 
   useEffect(() => {
@@ -39,33 +51,58 @@ const Socials = () => {
     fetchData();
   }, []);
 
-  if (!socials.length) {
-    return <p>Loading socials...</p>;
-  }
-
   return (
-    <div className={style.home}>
-        <div className={style.section}>
-        {socials.map((s, i) => (
-            <a
-            key={i}
-            href={s.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={s.name}
-            >
-            <FontAwesomeIcon icon={iconMap[s.name]} size="2x" className="social-icon" />
-            </a>
-        ))}
+    <div className={style.pageLayout}>
+      <aside className={style.sidebar}>
+        <button
+          type="button"
+          className={style.themeToggle}
+          onClick={toggleTheme}
+          aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          title={theme === "dark" ? "Light mode" : "Dark mode"}
+        >
+          <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
+        </button>
+        <div className={style.sidebarContent}>
+          <img className={style.profilePhoto} src={headshot} alt="Matt Laws" />
+          <a href="/" className={style.siteName}>Matt Laws</a>
+          <div className={style.nameDivider} aria-hidden="true" />
+          <nav className={style.sectionNav} aria-label="Page sections">
+            <ul>
+              {SECTIONS.map(({ id, label }) => (
+                <li key={id}>
+                  <a href={`#${id}`} className={style.navLink}>
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          {socials.length > 0 && (
+            <div className={style.sidebarSocials}>
+              {socials.map((s, i) => (
+                <a
+                  key={i}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={s.name}
+                >
+                  <FontAwesomeIcon icon={iconMap[s.name]} size="lg" />
+                </a>
+              ))}
+            </div>
+          )}
         </div>
+      </aside>
 
-        <div className={style.section}>
+      <main className={style.mainContent}>
+        <section id="about" className={style.section}>
             <h1 className={style.sectiontitle}>About</h1>
             <div className={style.about}>{blurb}</div>
-        </div>
+        </section>
 
-
-        <div className={style.section}>
+        <section id="news" className={style.section}>
             <h1 className={style.sectiontitle}>News</h1>
 
             <div className={style.scrollbox} role="list">
@@ -90,21 +127,21 @@ const Socials = () => {
                 </article>
                 ))}
             </div>
-        </div>
+        </section>
 
-        <div className={style.section}>
+        <section id="education" className={style.section}>
             <h1 className={style.sectiontitle}>Education</h1>
             <ul className={style.paperlist}>
-                <li>
+                <li className={style.education}>
                     <strong>PhD in Computer Science</strong>, Northeastern University <em>(Current)</em>
                 </li>
-                <li>
+                <li className={style.education}>
                     <strong>BA in Computer Science</strong>, Williams College (2025)
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <div className={style.section}>
+        <section id="publications" className={style.section}>
             <h1 className={style.sectiontitle}>Publications</h1>
             <ul className={style.paperlist}>
                 {pubData.map((p, i) => (
@@ -138,10 +175,9 @@ const Socials = () => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </section>
 
-
-        <div className={style.section}>
+        <section id="talks" className={style.section}>
             <h1 className={style.sectiontitle}>Talks</h1>
             <ul className={style.paperlist}>
                 {talkData.map((p, i) => (
@@ -163,9 +199,9 @@ const Socials = () => {
                     </li>
                 ))}
             </ul>
-        </div>
-        
-        <div className={style.section}>
+        </section>
+
+        <section id="teaching" className={style.section}>
             <h1 className={style.sectiontitle}>Teaching</h1>
             <ul className={style.paperlist}>
                 {teachingData.map((p, i) => (
@@ -182,14 +218,10 @@ const Socials = () => {
                     </li>
                 ))}
             </ul>
-        </div>
-
-
-
-
-
+        </section>
+      </main>
     </div>
   );
 };
 
-export default Socials;
+export default Home;

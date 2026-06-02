@@ -7,14 +7,14 @@
     background-color: rgb(0, 204, 255, 0.0);
     padding: 0;
     margin: 0;
-    color: rgb(0, 204, 255, 0.8);
+    color: var(--color-accent);
 }
 
 #blurb {
     /* float: right; */
     /* padding: 5%; */
     /* position: relative; */
-    font-size: 1.6vw;
+    font-size: 1.35vw;
     font-weight: 300;
 }
 
@@ -33,9 +33,9 @@
     /* float: right; */
     /* padding: 5%; */
     /* padding-right: 1%; */
-    color: white;
+    color: var(--color-text);
     /* padding-top: 10%; */
-    font-size: 1.6vw;
+    font-size: 1.35vw;
 }
 
 .right {
@@ -65,13 +65,13 @@
     }
     #blurb {
 
-        font-size: 3.5vw;
+        font-size: 3vw;
         margin-bottom: 1vw;
 
     }
 
     #resLink {
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
 
     #meImg {

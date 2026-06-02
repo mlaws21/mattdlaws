@@ -37,7 +37,8 @@ header {
     z-index: 1000;
 
     font-family: 'Titillium Web', sans-serif;
-    /* background-color: white; */
+    background-color: var(--color-bg);
+    color: var(--color-text);
     position: fixed;
     top: 0;
     left: 0;
@@ -45,8 +46,7 @@ header {
     height: 4vw;
     width: 100%;
     align-items: center;
-    /* border-bottom: 0.1vw solid #E9E9E9; */
-    border-bottom: 0.1vw solid black;
+    border-bottom: 0.1vw solid var(--color-border);
     /* box-shadow: 0 0 1.5vw 0 black; */
     display:flex;
     justify-content:space-between;
@@ -76,11 +76,9 @@ header li a {
     text-decoration: none;
 }
 
-a:hover {
-    text-shadow: 0 0 0.5vw white;
-    /* background-color: #E9E9E9; */
-    /* color: rgb(0, 204, 255); */
-    color: white;
+header a:hover {
+    text-shadow: 0 0 0.5vw var(--color-nav-hover);
+    color: var(--color-nav-hover);
 }
 
 @media (max-width: 1000px) {
@@ -134,12 +132,5 @@ a:hover {
         font-weight: bolder;
     }
 
-
-    a:hover {
-
-        /* color: rgb(0, 204, 255); */
-        color: white;
-
-    }
 
 }

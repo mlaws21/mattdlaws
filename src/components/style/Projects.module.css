@@ -24,7 +24,7 @@ p,a {
 
 .projClose {
 
-    font-size: 2vw;
+    font-size: 1.7vw;
     border-radius: 1vw;
     z-index: -1;
     width: 15vw;
@@ -32,8 +32,8 @@ p,a {
     margin: 3vw;
     padding: 1.5vw;
     /* border: 0.1vw  rgba(69, 82, 81, 0.661); */
-    background-color: rgb(238, 202, 255);
-    box-shadow: 0 0 0.2vw rgb(238, 202, 255);
+    background-color: var(--color-card-bg);
+    box-shadow: 0 0 0.2vw var(--color-card-bg);
     float: left;
     text-align: center;
 
@@ -45,7 +45,7 @@ p,a {
 
 .projTitle {
     text-align: center;
-    color: black;
+    color: var(--color-card-text);
 
     /* font-family: 'Titillium Web', sans-serif;
     font-weight: bolder;
@@ -65,8 +65,8 @@ p,a {
     left: auto;
     padding: 3vw;
     border-radius: 1.5vw;
-    background-color: rgb(238, 202, 255);
-    box-shadow: 0 0 0.2vw rgb(238, 202, 255);
+    background-color: var(--color-card-bg);
+    box-shadow: 0 0 0.2vw var(--color-card-bg);
 
     width: 60vw;
     height: 70%;
@@ -77,26 +77,26 @@ p,a {
 .bigTitle {
     padding: 0;
     margin: 0;
-    font-size: 3vw;
+    font-size: 2.55vw;
     text-align: center;
-    color: black;
+    color: var(--color-card-text);
 
 
 }
 
 .projClose:hover {
-    background-color: rgba(69, 82, 81, 0.661);
-    box-shadow: 0 0 1vw rgba(69, 82, 81, 0.661);
+    background-color: var(--color-card-hover);
+    box-shadow: 0 0 1vw var(--color-card-hover);
 
 }
 
 #description {
     padding-top: 3%;
-    color: black;
+    color: var(--color-card-text);
     width :45%;
     height: 70%;
     float: left;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     overflow-y: scroll;
 
     /* border: 0.1vw solid  rgba(69, 82, 81, 0.661); */
@@ -119,15 +119,16 @@ p,a {
 }
 
 #link {
-    font-size: 1.6vw;
+    font-size: 1.35vw;
     padding-top: 3%;
     text-align: center;
     background-color: rgb(0, 204, 255, 0);
     float: right;
+    color: var(--color-card-text);
 }
 
 #close {
-    font-size: 1.6vw;
+    font-size: 1.35vw;
 
     position: absolute;
     left: 95%;
@@ -149,7 +150,7 @@ p,a {
 
     .projClose {
 
-        font-size: 8vw;
+        font-size: 6.8vw;
         border-radius: 3vw;
         width: 75vw;
         height: 75vw;
@@ -202,7 +203,7 @@ p,a {
         width :100%;
         height: auto;
         float: left;
-        font-size: 4vw;
+        font-size: 3.4vw;
         overflow-y: scroll;
         
         
@@ -211,7 +212,7 @@ p,a {
     }
 
     #link {
-        font-size: 3vw;
+        font-size: 2.55vw;
         padding-top: 1%;
         text-align: center;
         background-color: rgb(0, 204, 255, 0);
@@ -220,7 +221,7 @@ p,a {
     }
 
     .bigTitle {
-        font-size: 4vw;
+        font-size: 3.4vw;
     }
 
     #bigImage {
@@ -235,5 +236,5 @@ p,a {
 }
 
 .white {
-    color:white
+    color: var(--color-text);
 }

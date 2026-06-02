@@ -5,8 +5,8 @@
   }
   
 #err {
-    font-size: 3vw;
-    color: rgb(0, 204, 255);
+    font-size: 2.5vw;
+    color: var(--color-accent);
     text-align: center;
     line-height: 10vh;
   }

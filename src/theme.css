@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;500;600;700&display=swap');
+
+[data-theme="dark"] {
+  --color-bg: rgb(23, 23, 23);
+  --color-text: rgb(238, 202, 255);
+  --color-accent: rgb(0, 204, 255);
+  --color-sidebar-bg: rgb(40, 32, 52);
+  --color-border: rgba(255, 255, 255, 0.15);
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-surface: rgba(255, 255, 255, 0.02);
+  --color-nav-hover: #ffffff;
+  --color-card-bg: rgb(238, 202, 255);
+  --color-card-text: #000000;
+  --color-card-hover: rgba(69, 82, 81, 0.661);
+}
+
+[data-theme="light"] {
+  --color-bg: rgb(252, 250, 255);
+  --color-text: rgb(45, 30, 65);
+  --color-accent: rgb(90, 50, 140);
+  --color-sidebar-bg: rgb(235, 228, 245);
+  --color-border: rgba(45, 30, 65, 0.18);
+  --color-border-subtle: rgba(45, 30, 65, 0.1);
+  --color-surface: rgba(45, 30, 65, 0.04);
+  --color-nav-hover: rgb(90, 50, 140);
+  --color-card-bg: rgb(220, 200, 240);
+  --color-card-text: rgb(30, 20, 45);
+  --color-card-hover: rgba(90, 50, 140, 0.25);
+}
+
+html,
+body,
+#root {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Titillium Web', sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a {
+  color: inherit;
+}
